@@ -8,7 +8,7 @@ class Admin::NotificationsController < Admin::AdminController
 
   def create
     notification = Notification.create!(notification_params)
-    redirect_to admin_notification_path(notification)
+    # redirect_to admin_notification_path(notification)
   end
 
   private
