@@ -1,5 +1,6 @@
 class Admin::NotificationsController < Admin::AdminController
   def show
+    @notification = Notification.find(params[:id])
   end
 
   def new
@@ -8,7 +9,7 @@ class Admin::NotificationsController < Admin::AdminController
 
   def create
     notification = Notification.create!(notification_params)
-    # redirect_to admin_notification_path(notification)
+    redirect_to admin_notification_path(notification)
   end
 
   private
